@@ -58,19 +58,12 @@ void loop() {
   {
     //Configura 485 para escrita
     digitalWrite(4, HIGH);
-    delay(100);
-    Serial.begin(9600);
-    delay(100);
     //TODO colocar temperatura do sensor
     Serial.println(message[0]+"|50");
-    
     //Espera até q último byte ssaia do buffer
     while ((UCSR0A & _BV (TXC0)) == 0){}
     //volta para leitura
     digitalWrite(4, LOW);
-    delay(100);
-    Serial.begin(9600);
-    delay(100);
     
     clearMessage();
   } else if (cameMessage)
