@@ -1,5 +1,3 @@
-#define USART_BAUDRATE 9600
-#define MYUBRR (((F_CPU / (USART_BAUDRATE * 16UL))) - 1)
  String inputString = "";
  String message[10];
  boolean cameMessage = false;
