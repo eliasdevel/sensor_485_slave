@@ -58,7 +58,8 @@ void loop() {
   {
     //Configura 485 para escrita
     digitalWrite(4, HIGH);
-    Serial.println("TODO RANDOM TEMP");
+    //TODO colocar temperatura do sensor
+    Serial.println(message[0]+"|10");
     //volta para leitura
     digitalWrite(4, LOW);
     
